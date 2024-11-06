@@ -1,0 +1,262 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: auto;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    
+    padding-top: 100px; /* added space between header */
+    font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 1.6;
+    background-color: rgb(187, 187, 151);
+    color: black; /*text*/
+}
+
+/* Header and nav section */
+#header {
+    background-color: #4649A8;
+    color: black;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0; /* Stick to the top */
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight:550;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: whitesmoke;
+}
+/* End of header and nav section */
+
+
+
+section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Home section */
+#home {
+    text-align: center;
+    background-color: #FFFDF7;
+}
+
+#home h1 {
+    margin-top: 20px;
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+#about img {
+    max-width: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#about p {
+    max-width: 600px;
+    line-height: 1.8;
+    font-size: 18px;
+    color: black;
+}
+
+
+video {
+    width: 300px;  
+    height: auto;  
+    max-width: 100%; /* scales video to fit container */
+    border: 2px solid #333; 
+}
+
+/* End About section */
+
+/* Projects Section */
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#projects ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#projects ul li {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* To seperate both projects*/
+#projects figcaption{
+    margin-bottom: 20px;
+}
+
+
+#projects img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+/* end projects section */
+
+/* Contact Section */
+#contact .contactItem {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.contactItem img{
+    max-width: 150px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.1);
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #4649A8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+form button:hover {
+    background-color: #7579eb;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4649A8;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 40px; /* Adds spacing between the content and the footer */
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+
+
+/* Responsive Styles */
+
+/* Media Query for tablets */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about img {
+        margin-bottom: 20px;
+    }
+
+    #projects ul li {
+        width: 100%;
+    }
+}
+
+/* Media Query for mobiles */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    h1, h2 {
+        font-size: 28px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 14px;
+    }
+}
